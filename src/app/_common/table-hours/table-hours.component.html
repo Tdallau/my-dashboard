@@ -1,0 +1,23 @@
+<div class="cell bottom-cell info">
+  <h5>Afgelopen 10 werk dagen</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Datum</th>
+        <th scope="col">Start</th>
+        <th scope="col">End</th>
+        <th scope="col">Pauze</th>
+        <th scope="col">Uren</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of table">
+        <th>{{getDate(row.date)}}</th>
+        <td>{{getHours(row.start)}}</td>
+        <td>{{getHours(row.end)}}</td>
+        <td>{{getHours(row.break)}}</td>
+        <td>{{getTotalHours(row)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

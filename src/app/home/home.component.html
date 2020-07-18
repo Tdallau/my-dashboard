@@ -1,0 +1,34 @@
+<div class="content">
+  <div class="row row-top">
+    <div class="col">
+      <app-total-cell [isMoney]="false" [title]="'Uren gewerkt'" [value]="totalHours" ></app-total-cell>
+    </div>
+    <div class="col">
+      <app-total-cell [isMoney]="true" [title]="'Totaal salaris'" [value]="totalSalary.toFixed(2)"></app-total-cell>
+    </div>
+    <div class="col">
+      <app-total-cell [isMoney]="true" [title]="'Salaris uitbetaald'" [value]="totalPayed.toFixed(2)"></app-total-cell>
+    </div>
+    <div class="col">
+      <app-total-cell [isMoney]="true" [title]="'Salaris tekort'" [value]="totalShortage.toFixed(2)"></app-total-cell>
+    </div>
+  </div>
+  <div class="w-100 spacing"></div>
+  <div class="row row-middle">
+    <div class="col-6">
+      <app-line-chart [chartData]="salaryMonthChart" [chartLabels]="chartLabels"></app-line-chart>
+    </div>
+    <div class="col-6">
+      <app-bar-chart [chartData]="hoursChart" [chartLabels]="chartLabels" ></app-bar-chart>
+    </div>
+  </div>
+  <div class="w-100 spacing-middle"></div>
+  <div class="row row-bottom">
+    <div class="col-6">
+      <app-table [table]="table" ></app-table>
+    </div>
+    <div class="col-6">
+      <app-table-hours [table]="tableDays" ></app-table-hours>
+    </div>
+  </div>
+</div>

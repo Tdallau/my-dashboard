@@ -1,0 +1,23 @@
+<div class="cell bottom-cell info">
+  <h5>Afgelopen maanden</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Maand</th>
+        <th scope="col">Uren gewerkt</th>
+        <th scope="col">Salaris</th>
+        <th scope="col">Betaald</th>
+        <th scope="col">Tekort</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of table">
+        <th>{{row.month}}</th>
+        <td>{{row.hours}}</td>
+        <td>{{row.salary.toFixed(2)}}</td>
+        <td>€ {{row.payed.toFixed(2)}}</td>
+        <td>€ {{row.shortage.toFixed(2)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
